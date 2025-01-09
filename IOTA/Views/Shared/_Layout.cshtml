@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - iOTA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/foundation.css" />
+    <link rel="stylesheet" href="~/css/slick.css" />
+    <link rel="stylesheet" href="~/css/slick-theme.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="grid-container pos-relative">
+            <a href="#" class="button project-button"><img src="~/assets/have-a-project.png" /></a>
+            <div class="header top-bar">
+                <div class="top-bar-left">
+                    <img src="~/assets/logo.png" alt="Company logo" />
+                </div>
+                <div class="top-bar-right header-right">
+                    <div class="title-bar" data-responsive-toggle="menu" data-hide-for="large">
+                        <button class="menu-icon" type="button" data-toggle="menu"></button>
+                    </div>
+                    <nav class="show-for-large">
+                        <ul class="nav">
+                            <li class="active">Home</li>
+                            <li>Services</li>
+                            <li>Sustainability</li>
+                            <li>Our Work</li>
+                            <li>Resources</li>
+                            <li>About iOTA</li>
+                            <li>Get in Touch</li>
+                        </ul>
+                    </nav>
+                    <img src="~/assets/search.png" alt="Search icon" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+    <footer>
+        <div class="grid-container fluid">
+            <div class="footer">
+                <div class="grid-container">
+                    <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+                        <div class="cell small-12">
+                            <img src="~/assets/Group 9.png" alt="Footer company logo" class="footer-logo" />
+                        </div>
+                    </div>
+                    <div class="grid-x grid-margin-x grid-padding-x">
+                        <div class="cell small-12 medium-6 large-3 footer-top">
+                            <p>© iOTA Interiors Limited T/A iOTA Office Furniture <br />Terms & Conditions <br />Site by Verto</p>
+                        </div>
+                        <div class="cell small-12 medium-6 large-3 footer-top">
+                            <p><strong>Head Office:</strong> <br />The Crabtree, Quinton Green Park, Quinton, Northampton, NN7 2EG</p>
+                        </div>
+                        <div class="cell small-12 medium-4 large-3">
+                            <p>Connect with Us <br />Like Us</p>
+                        </div>
+                        <div class="cell small-12 medium-8 large-3">
+                            <p>+44 (0) 1604 289630 <br />hello@iotaofficefurniture.co.uk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/foundation/what-input.js"></script>
+    <script src="~/lib/foundation/foundation.js"></script>
+    <script src="~/lib/slick/slick.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

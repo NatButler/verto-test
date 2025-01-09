@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - iOTA</title>
+    <link rel="stylesheet" href="~/css/foundation.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+<body>
+    <header class="grid-container">
+        <h1>Admin</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a asp-controller="Admin" asp-action="Index">Home page content</a></li>
+                <li><a asp-controller="Admin" asp-action="Images">Image upload</a></li>
+                <li class="right-align"><a href="/" class="button">View site</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="grid-container">
+        @RenderBody()
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/foundation/what-input.js"></script>
+    <script src="~/lib/foundation/foundation.js"></script>
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

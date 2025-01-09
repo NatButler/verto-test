@@ -1,0 +1,35 @@
+﻿@{
+	ViewData["Title"] = "Image upload";
+}
+
+<h2>Image upload</h2>
+<div class="grid-x grid-margin-x">
+	<div class="cell small-12 large-8">
+		<form method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Upload" class="image-upload-form">
+			<label for="image">Upload an image
+				<input type="file" name="image" accept=".png" required />
+				<p class="help-text">Use the file browser to select an image to upload by clicking on the "Choose file" button above. Uploaded images are added to the image slider on the home page and should be sized appropriately and .png format. Once uploaded, a thumbnail of the image is displayed below. Note there is a default image always displayed as the first image in the slider, which is not included as an uploaded image.</p>
+			</label>
+			<button type="submit" class="button">Upload image</button>
+		</form>
+	</div>
+
+	<div class="cell small-12">
+		<h3>Uploaded images</h3>
+		@if (@ViewBag.SliderImages.Length == 0) {
+			<p>There are currently no images uploaded.</p>
+		}
+
+		<ul class="thumbnail-list">
+		@foreach (var image in @ViewBag.SliderImages)
+		{
+			<li>
+				<div class="thumbnail-wrapper">
+					<img src="~/assets/uploads/@image" class="thumbnail" />
+					<span>@image</span>
+				</div>
+			</li>
+		}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,103 @@
+﻿@model IOTA.Areas.Admin.Models.HomePage;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="grid-container fluid">
+    <div class="slider-container">
+        <div class="img-slider">
+            <div class="img-container"><img src="~/assets/image4.png" alt="Dynamic office space" /></div>
+            @foreach (var image in @ViewBag.SliderImages)
+            {
+                <div class="img-container">
+                    <img src="~/assets/uploads/@image" alt="Dynamic office space" />
+                </div>
+            }
+        </div>
+        <div class="text-overlay">
+            <h2>@Html.DisplayFor(model => model.SliderOverlayHeading)</h2>
+        </div>
+    </div>
+</div>
+<div class="grid-container fluid banner pos-relative mb-100">
+    <a href="#case-studies" class="button anchor-link"><img src="~/assets/explore-our-work.png" alt="Explore our work" /></a>
+    <div class="grid-x grid-margin-x align-center">
+        <div class="cell small-10 large-4 mb-50">
+            <img src="~/assets/circle-icons.png" alt="" />
+        </div>
+        <div class="cell small-10 large-4 large-offset-1 banner-text-wrapper">
+            <div>
+                <h3 class="banner-heading">@Html.DisplayFor(model => model.TopBannerHeading)</h3>
+                <div class="grid-x grid-margin-x align-center">
+                    <div class="cell small-8">
+                        <p>@Html.DisplayFor(model => model.TopBannerText)</p>
+                        <a href="#" class="button what-we-do-button"><img src="~/assets/what-we-do.png" alt="What we do" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h4 id="case-studies" class="center mb-50 explore-heading">Explore our latest work...</h4>
+<div class="grid-container">
+    <div class="grid-x grid-margin-x align-center">
+        <div class="cell small-8 medium-5 large-4 case-study case-study-1 mb-100">
+            <h5>@Html.DisplayFor(model => model.CaseStudy1Heading)</h5>
+            @if (Model.CaseStudy1Summary != null)
+            {
+                <p>@Html.DisplayFor(model => model.CaseStudy1Summary)</p>
+            }
+            <a href="#" class="view-more">View more <img src="~/assets/arrow-right.png" alt="Arrow right" /></a>
+        </div>
+        <div class="cell medium-5 large-4 case-study case-study-2 mb-100 show-for-medium">
+            <h5>@Html.DisplayFor(model => model.CaseStudy2Heading)</h5>
+            @if (Model.CaseStudy2Summary != null) {
+                <p>@Html.DisplayFor(model => model.CaseStudy2Summary)</p>
+            }
+            <a href="#" class="view-more">View more <img src="~/assets/arrow-right.png" alt="Arrow right" /></a>
+        </div>
+        <div class="cell large-4 case-study case-study-3 mb-100 show-for-large">
+            <h5>@Html.DisplayFor(model => model.CaseStudy3Heading)</h5>
+            @if (Model.CaseStudy3Summary != null)
+            {
+                <p>@Html.DisplayFor(model => model.CaseStudy3Summary)</p>
+            }
+            <a href="#" class="view-more">View more <img src="~/assets/arrow-right.png" alt="Arrow right" /></a>
+        </div>
+    </div>
+</div>
+<div class="grid-container fluid">
+    <div class="grid-x grid-margin-x icon-banner">
+        <div class="cell medium-2 medium-offset-2">
+            <div class="center">
+                <img src="~/assets/Group 456.png" alt="Office icon" />
+            </div>
+        </div>
+        <div class="cell medium-2">
+            <div class="center">
+                <img src="~/assets/Group 457.png" alt="Education icon" />
+            </div>
+        </div>
+        <div class="cell medium-2">
+            <div class="center">
+                <img src="~/assets/Group 458.png" alt="Healthcare icon" />
+            </div>
+        </div>
+        <div class="cell medium-2">
+            <div class="center">
+                <img src="~/assets/Group 459.png" alt="Hospitality icon" />
+            </div>
+        </div>
+    </div>
+    <div class="banner-img pos-relative">
+        <div class="text-overlay center">
+            <h3>@Html.DisplayFor(model => model.ImageOverlayHeading)</h3>
+            <p class="text">@Html.DisplayFor(model => model.ImageOverlayText)</p>
+            <nav>
+                <a href="#" class="button watch-video-button"><img src="~/assets/watch-the-video.png" alt="Watch the video" /></a>
+                <a href="#" class="button about-button"><img src="~/assets/about-iota.png" alt="About iOTA" /></a>
+            </nav>
+        </div>
+    </div>
+</div>

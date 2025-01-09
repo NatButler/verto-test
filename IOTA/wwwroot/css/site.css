@@ -1,0 +1,382 @@
+:root {
+    --text: #3E3E3E;
+    --white: #ffffff;
+    --mustard: #ddb62e;
+    --teal: #18beab;
+    --light-grey: #f4f4f4;
+    --dark-grey: #333333;
+    --dark-blue: #2A4351;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'DM Serif Display', serif;
+}
+
+h2 {
+    font-size: 55px;
+    line-height: 58px;
+}
+
+h3 {
+    font-size: 45px;
+    line-height: 55px;
+}
+
+h4 {
+    font-size: 45px;
+    line-height: 45px;
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Helpers */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+/* Styles */
+.header {
+    padding: 40px 0;
+    background-color: var(--white);
+}
+
+.project-button {
+    position: absolute;
+    right: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--mustard);
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.project-button:hover {
+    background-color: var(--mustard);
+    opacity: 0.8;
+}
+
+.header .logo {
+    margin-top: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.header-right nav {
+    display: flex;
+    margin-top: 40px;
+}
+
+.header-right img {
+    margin-left: 30px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    color: var(--text);
+    margin: 0;
+    background-color: var(--white) !important;
+    font-weight: 500;
+}
+
+.nav .active {
+    color: var(--mustard);
+}
+
+.slider-container {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-container .img-slider {
+    margin: 0;
+}
+
+.img-slider .img-container {
+    overflow: hidden;
+}
+
+.slider-container .img-slider img {
+    filter: brightness(60%);
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 100%;
+    min-height: 25rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slider-container .slick-dots {
+    bottom: 40px;
+}
+
+.banner {
+    background-color: var(--light-grey);
+    padding: 115px 0;
+}
+
+.banner .anchor-link {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    background-color: var(--teal);
+    border-radius: 15px 0 15px 15px;
+}
+
+.banner .banner-heading {
+    color: var(--dark-blue);
+}
+
+.banner a {
+    background-color: var(--mustard);
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.banner .what-we-do-button:hover {
+    background-color: var(--mustard);
+    opacity: 0.8;
+}
+
+.banner-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-text-wrapper p {
+    margin: 40px 0;
+}
+
+.explore-heading {
+    text-align: center;
+}
+
+.case-study {
+    height: 520px;
+    border-radius: 20px;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--white);
+}
+
+.case-study a {
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.case-study-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/image5.png') 0% 0% no-repeat padding-box;
+}
+
+.case-study-1 p {
+    line-height: 22px;
+}
+
+.case-study-2 {
+    background: transparent url('../assets/image3.png') 0% 0% no-repeat padding-box;
+}
+
+.case-study-3 {
+    background: transparent url('../assets/image2.png') 0% 0% no-repeat padding-box;
+}
+
+.icon-banner {
+    margin: 0;
+    padding: 59px 0;
+    background-color: var(--dark-blue);
+    border-radius: 15px 15px 0 0;
+}
+
+.icon-banner img {
+    margin-bottom: 20px;
+}
+
+.banner-img {
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/image1.png') 0% 0% no-repeat padding-box;
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+}
+
+.text-overlay h3 {
+    text-align: center;
+}
+
+.text-overlay .text {
+    margin: 10px 0 30px;
+    text-align: center;
+}
+
+.text-overlay nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-video-button {
+    background-color: var(--teal);
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.watch-video-button:hover {
+    background-color: var(--teal);
+    opacity: 0.8;
+}
+
+.about-button {
+    background-color: var(--mustard);
+    border-radius: 10px;
+}
+
+.about-button:hover {
+    background-color: var(--mustard);
+    opacity: 0.8;
+}
+
+.footer {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border-radius: 0 0 15px 15px;
+    padding: 40px 0 10px;
+    margin-bottom: 15px;
+}
+
+.footer .footer-top {
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.footer .footer-logo {
+    margin-bottom: 30px;
+}
+
+/* Overrides */
+.title-bar {
+    background-color: transparent;
+    color: var(--dark-grey);
+    padding: 0;
+}
+
+.top-bar .top-bar-left, .top-bar .top-bar-right {
+    flex: 0 0 50%;
+}
+
+.menu-icon::after {
+    background: var(--dark-grey);
+    box-shadow: 0 7px 0 var(--dark-grey), 0 14px 0 var(--dark-grey);
+}
+
+.slick-dots li button::before {
+    content: "\25EF";
+    color: var(--white);
+    font-size: 14px;
+}
+
+.slick-dots li.slick-active button::before {
+    content: "\2B24";
+    color: var(--white);
+}
+
+@media screen and (min-width: 640px) {
+    .project-button {
+        right: 15px;
+    }
+
+    .banner .anchor-link {
+        right: 15px;
+    }
+
+    .icon-banner img {
+        margin-bottom: 0;
+    }
+} 
+    
+@media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 70px;
+        line-height: 68px;
+    }
+
+    h3 {
+        font-size: 55px;
+        line-height: 65px;
+    }
+
+    h4 {
+        font-size: 35px;
+    }
+
+    h5 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .footer .footer-top {
+        border-bottom: none;
+    }
+
+    .project-button {
+        right: 20px;
+    }
+
+    .text-overlay nav {
+        display: inline;
+    }
+
+    .watch-video-button {
+        margin-right: 30px;
+    }
+
+    .top-bar .top-bar-left, .top-bar .top-bar-right {
+        flex: 0 0 auto;
+    }
+}

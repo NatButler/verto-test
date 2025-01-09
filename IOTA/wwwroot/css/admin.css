@@ -1,0 +1,37 @@
+﻿.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0 0 20px;
+    padding: 0;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+
+.nav-list .right-align {
+    margin-left: auto;
+}
+
+/* Image uploads */
+.image-upload-form {
+    margin-bottom: 20px;
+}
+
+.thumbnail-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnail-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail {
+    max-width: 250px;
+    margin-bottom: 5px;
+}
